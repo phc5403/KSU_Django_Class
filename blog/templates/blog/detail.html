@@ -10,30 +10,35 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <title>Hello, world!</title>
+  <title>BLOG</title>
 </head>
 
 <body>
-  <div class="container">
-    <h1>블로그 모델 적용하기.</h1><br><hr>
-  </div>
-  
-  <div class="container">
-    {% for blog in blogs.all %}
-      <div class="container">
-        <h1 style="color:blue;" >{{ blog.title }}</h1>
-        <p> {{ blog.pub_date }} </p>
-        <p> {{ blog.body }} </p>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}">LIKELION</a> 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link active" href="{% url 'home' %}">Home</a> 
+          <a class="nav-item nav-link" href="#">Blog</a> 
+          <a class="nav-item nav-link" href="#">수료증</a> 
+        </div>
       </div>
-    {% endfor %}
-  </div>
-
-
-
-
-
-
-
+    </div> 
+  </nav>
+  
+  <!-- -->
+  <div class="container jumbotron">
+      <h1> {{ blog.title }} </h1>
+      <p> {{ blog.pub_date }} </p>
+      <p> {{ blog.body }} </p>
+      <a href="{% url 'home' %}"> 돌아가기 </a>
+  </div>>
+  <!-- -->
 
 
   <!-- Optional JavaScript -->
