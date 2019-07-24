@@ -27,4 +27,5 @@ Django - Model & Admin / QuerySet & Method / Detail.html / STATIC & MEDIA
     
     <a class="nav-item nav-link" href="{% url 'portfolio' %}">포트폴리오</a>
 
-● 주의사항 : base.html을 extends하기 위해 portfolio.html의 내용을 지울때 만약 동작이 안될경우, head 태그와 body>의 끝부분에있는 <script>들을 살려서 해볼것.
+● 주의사항 : base.html을 extends하기 위해 portfolio.html의 내용을 지울때 만약 동작이 안될경우, 
+            head 태그와 body의 끝부분에있는 <script>들을 살려서 해볼것.
